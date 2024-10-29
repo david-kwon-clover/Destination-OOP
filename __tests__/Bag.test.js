@@ -9,13 +9,14 @@ describe("Bag tests", () => {
     let testOwner;
     beforeEach(() => {
         testBagNew = new Bag(10, 17);
+        testBagOwned = new Bag(15, 18);
         testPerson = new Person("Dave", "New York");
         testOwner = new Person("Brandon", "Los Angeles");
         testBagOwned.assignOwner(testOwner);
     })
 
     it("Should create instance of Bag class", () => {
-        expect(testBag).toBeInstanceOf(Bag);
+        expect(testBagNew).toBeInstanceOf(Bag);
     })
 
     describe("Bag properties", () => {
@@ -37,8 +38,8 @@ describe("Bag tests", () => {
         
         it("Should correctly set owner with assignOwner()", () => {
             testBagNew.assignOwner(testPerson);
-            expect(testBag.getOwner()).toBeInstanceOf(Person);
-            expect(testBag.getOwner()).toEqual(testPerson);
+            expect(testBagNew.getOwner()).toBeInstanceOf(Person);
+            expect(testBagNew.getOwner()).toEqual(testPerson);
         })
     })
 })
