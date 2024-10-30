@@ -1,6 +1,7 @@
+const Airport = require("./Airport");
+
 class Plane {
-
-
+    
 }
 
 
